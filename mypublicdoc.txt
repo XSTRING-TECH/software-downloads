@@ -1,0 +1,3 @@
+https://github.com/XSTRING-TECH/private-software
+
+Private development and testing repository for XSTRING TECH software.
