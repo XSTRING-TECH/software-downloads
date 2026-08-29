@@ -1,3 +1,5 @@
-https://github.com/XSTRING-TECH/private-software
+https://github.com/XSTRING-TECH/software-downloads
 
-Private development and testing repository for XSTRING TECH software.
+Repository name: software-downloads
+
+Description: Official XSTRING TECH software downloads, source code and releases, subject to applicable licence terms.
