@@ -32,7 +32,7 @@ Follow this guide to configure the xstAuth Light Server (AAS), including the req
 
 Follow this guide to configure your Confidential Client System (CCS), including the required server settings, mTLS, JWT verification, and connection with the xstAuth Light Server (AAS).
 
-### 9. 09_Test_Run.md
+### 9. 08_Test_Run.md
 
 Follow this guide to perform an end-to-end test of the xstAuth Light Server (AAS) and your Confidential Client System (CCS).
 
