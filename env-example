@@ -7,16 +7,17 @@
 # source code, configuration files, or publicly accessible locations.
 
 COOKIE_SECRET = 'your-super-secret-key'
+
 PRIVATE_KEY = 'C:/xstAuth/certs/ccs.yourdomain.com-key.pem'
 CERTIFICATE = 'C:/xstAuth/certs/ccs.yourdomain.com-crt.pem'
-INTERMEDIATE_CHAIN = 'C:/xstAuth/certs/ccs.yourdomain.com-chain-only.pem'
-FULL_CHAIN = 'C:/xstAuth/certs/ccs.yourdomain.com-chain.pem'
-
-CCS_CLIENT_ID = '9ug2zyj6or7qp71dsxxu5nvpmz'
-CCS_CLIENT_SECRET = 'vaNpJSO_mHl4VeseeW4fpSMTmesV-cdxcgNIxmxhA-F_mwZwbBGReVlielF1QmJRYBVA8FvrMZlnqU7arUd7wA'
+# INTERMEDIATE_CHAIN = 'C:/xstAuth/certs/ccs.yourdomain.com-chain-only.pem'
+# FULL_CHAIN = 'C:/xstAuth/certs/ccs.yourdomain.com-chain.pem'
 
 mTLSKEY = 'C:/xstAuth/CCS_mTLS/mtlsKey.pem'
 mTLSCERT = 'C:/xstAuth/CCS_mTLS/mtlsCert.pem'
 mTLSCA = 'C:/xstAuth/CCS_mTLS/mtlsRootCA.pem'
 
 JWT_PUBLIC_KEY = 'C:/xstAuth/CCS_mTLS/publicKeyJWT.pem'
+
+CCS_CLIENT_ID = '9ug2zyj6or7qp71dsxxu5nvpmz'
+CCS_CLIENT_SECRET = 'vaNpJSO_mHl4VeseeW4fpSMTmesV-cdxcgNIxmxhA-F_mwZwbBGReVlielF1QmJRYBVA8FvrMZlnqU7arUd7wA'
