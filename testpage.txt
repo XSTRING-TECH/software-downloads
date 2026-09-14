@@ -1,5 +1,0 @@
-https://github.com/XSTRING-TECH/software-downloads
-
-Repository name: software-downloads
-
-Description: Official XSTRING TECH software downloads, source code and releases, subject to applicable licence terms.
