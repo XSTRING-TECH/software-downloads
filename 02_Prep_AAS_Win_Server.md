@@ -789,7 +789,7 @@ Still Having Problems? Refer to [`troubleshooting.md`](troubleshooting.md) for t
 
 After completing **Step 2**, you should have successfully configured and verified the **HTTPS connection for xstAuth Auth Server**.
 
-You can now proceed to configure the internal DNS records. See [`04_Config_Internal_DNS.md`](04_Config_Internal_DNS.md).
+You can now proceed to configure the internal DNS records. See [`03_Prep_CCS_Win_Server.md`](03_Prep_CCS_Win_Server.md).
 
 ---
 
