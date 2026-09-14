@@ -45,17 +45,19 @@ The returned addresses should correspond to the private IP addresses of the appr
 
 ---
 
-## 1.2 Temporary Configuration Using the Windows Hosts File
+## 1.2 Hostname Resolution Using the Windows Hosts File
 
-If you do not have an internal/private DNS Hosted Zone, you can temporarily configure hostname resolution using the Windows `hosts` file for testing.
+For a small, controlled environment, the Windows hosts file can be used for internal hostname resolution in production, provided the operator understands its limitations.
 
-The file is located at:
+For larger environments, an internal/private DNS Hosted Zone is recommended to provide centralised hostname management and easier administration. The hosts file method can also be used for quick testing where an internal/private DNS Hosted Zone is not yet available.
+
+The `hosts` file is located at:
 
 ```text
 C:\Windows\System32\drivers\etc\hosts
 ```
 
-Add the following entries to the `hosts` file on both the CCS Web Server and the xstAuth Light Server:
+Add the following entries to the `hosts` file on both the **CCS Web Server** and the **xstAuth Light Server**:
 
 ```text
 # localhost name resolution is handled within DNS itself.
@@ -63,10 +65,10 @@ Add the following entries to the `hosts` file on both the CCS Web Server and the
 # ::1             localhost
 
 # CCS Web Server
-10.14.2.18    ccs.private.io
+      10.14.2.18    ccs.private.io
 
 # xstAuth Light Server
-10.14.2.19    aas.private.io
+      10.14.2.19    aas.private.io
 ```
 
 Replace the example IP addresses with the actual private IP addresses of your servers.
@@ -183,5 +185,13 @@ After creating the firewall rules, verify that the rules exist:
 ```powershell
 Get-NetFirewallRule -DisplayName "Allow Private mTLS/HTTPS Inbound from CCS Web Server"
 ```
+
+## Step 2 Complete
+
+After completing **Step 2**, you should have successfully configured Internal DNS and Windows Firewall.
+
+Assumption: You have added the required entries to the `hosts` file on both the **CCS Web Server** and the **xstAuth Light Server**.
+
+You can now proceed to generate RSA key pairs. See [`05_Generate_RSA_Key_Pairs.md`](05_Generate_RSA_Key_Pairs.md).
 
 ---
