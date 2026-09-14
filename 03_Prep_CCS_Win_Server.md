@@ -36,7 +36,9 @@ If the server provider dynamically assigns the instance's public IP address:
 
 A static public IP address is recommended because DNS records and external services may rely on a consistent server address.
 
-If inbound traffic on TCP port 80 (HTTP) and TCP port 443 (HTTPS) is not already allowed by the **network firewall** rules, enable access to these ports. Port 80 may be disabled at a later stage once HTTP-01 certificate validation is complete.
+If inbound traffic on TCP ports **80 (HTTP)** and **443 (HTTPS)** is not already allowed by the network firewall rules, enable it now.
+
+Port 80 may be disabled at a later stage once **HTTP-01 certificate validation** is complete.
 
 ---
 
@@ -186,20 +188,28 @@ You do not need to download or install xstAuth Light Server or the licence certi
 
 ## 1.10 Set Up HTTP Server
 
+**Assumption:** You already have an **A record** pointing `www.yourdomain.com` to the server instance where the **CCS Web Server** will be set up.
+
 Extract the downloaded **Source code (ZIP)** to your preferred directory.
 
 Open **VS Code**, then select **File → Open Folder** and choose the directory where you extracted the source code.
 
-Open a terminal in VS Code. If prompted, click **Trust Folder & Continue**.
+If prompted, click Trust Folder & Continue.
 
-Create a directory for the CCS Web Server:
+You may see the following message:
+
+> Restricted Mode is intended for safe code browsing. Trust this folder to enable all features.
+
+Select **Manage**, then click **Trust** to proceed.
+
+Open a terminal in VS Code. Create a directory for the CCS Web Server:
 
 ```powershell
 mkdir CCS_WebServer
 cd CCS_WebServer
 ```
 
-Move the downloaded three files HTTP-01.js, HTTPS-01.js, and env-example.txt into the CCS_WebServer directory.
+Move the downloaded files HTTP-01.js and HTTPS-01.js into the CCS_WebServer directory.
 
 Open Command Prompt in the CCS_WebServer directory and run:
 
@@ -310,6 +320,8 @@ New-NetFirewallRule -DisplayName "Allow HTTP 80" -Direction Inbound -Protocol TC
 ------------------------------------------------------------------------
 
 ## 2. Start win-acme to Request CCS Web Server Certificate
+
+Assumption: The HTTP-01.js server is still running.
 
 ## 2.1 Start win-acme
 
@@ -697,7 +709,7 @@ application.
 
 ## HTTPS Connection - Verify HTTPS and the Certificates
 
-Move the downloaded HTTPS-01.js into the previously created `CCS_WebServer` directory.
+If not already done, move the downloaded HTTPS-01.js into the previously created CCS_WebServer directory.
 
 Open **HTTPS-01.js** in VS Code and update the following lines with the certificate files generated for your domain:
 
