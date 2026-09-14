@@ -6,6 +6,11 @@ to connect the xstAuth Light Server (AAS) with your Confidential Client System
 
 For complete installation and configuration instructions, see:
 xstAuth Light Server > Help > How to Setup
+---
+
+## **IMPORTANT — Password Required**
+
+Assumption: You have completed the `First-Run Server Admin Password Setup`. If not, refer to [`02_Prep_AAS_Win_Server.md`](02_Prep_AAS_Win_Server.md) for detailed instructions.
 
 ---
 
@@ -15,7 +20,7 @@ Open the **xstAuth Light Server** and add the downloaded licence certificate to 
 
 The default brand name is Passwordless Community. If you prefer to use your own brand name instead of the default name, email us at [**info@xstring.tech**](mailto:info@xstring.tech) with the name (maximum 25 characters) you would like to use and the website or platform URL.
 
-We will provide you with a dedicated **12-month licence certificate at no cost**. The 12-month licence is **renewable at no cost**, subject to eligibility and the applicable licence terms. Refer to [`README.md`](README.md) in the **Licence Renewal** section.
+We will provide you with a dedicated **12-month licence certificate at no cost**. The 12-month licence is **renewable at no cost**, subject to eligibility and the applicable licence terms. Refer to [`README.md`](https://github.com/XSTRING-TECH/private-software/blob/main/README.md) in the **Licence Renewal** section.
 
 The licence is provided at no cost and **no donation is required**. However, if you would like to support the continued development and maintenance of the project, you can make an optional donation:
 
@@ -59,19 +64,7 @@ Specify the file paths for the private key, certificate, and certificate chain o
 
 ### JWT Signing Config
 
-#### Create the AAS_JWT directory
-
-Create the directory:
-
-```powershell
-mkdir C:\xstAuth\AAS_JWT
-```
-
-Move the downloaded test PEM file `privateKeyJWT.pem` into:
-
-```text
-C:\xstAuth\AAS_JWT
-```
+Assumption: In the previous steps, you moved the downloaded test PEM file `privateKeyJWT.pem` into `C:/xstAuth/AAS_JWT`.
 
 Enter the following path in the **Signing Private Key Path** field:
 
@@ -88,7 +81,7 @@ Enter the following path in the **Signing Private Key Path** field:
 
 ## MUTUAL TLS (mTLS)
 
-The **xstAuth Light Server** includes a **How to Setup** page under the **Help** menu containing sample mTLS credentials and token-signing and verification credentials. The same credentials are also provided as PEM files. You can copy and paste the provided private key and certificates into the required configuration fields.
+The **xstAuth Light Server** includes a **How to Setup** page under the **Help** menu containing sample mTLS credentials and token-signing and verification credentials. The same credentials are also provided as PEM files.
 
 **IMPORTANT:**
 For production use, you **MUST** generate your own mTLS credentials.
@@ -97,6 +90,8 @@ For production use, you **MUST** generate your own mTLS credentials.
 
 The following values must correspond to the mTLS configuration used by your
 CCS.
+
+> To use the sample mTLS credentials, go to **Help > How to Setup** and find the relevant keys and certificates. You can copy and paste the provided private key and certificates into the required configuration fields.
 
 **mTLS Server Private Key:**
 
@@ -195,8 +190,7 @@ xstAuth Light Server.
 
 > **Note:** If you change `aas.private.io` to your own internal domain, you will need to generate new mTLS credentials using the corresponding hostname.
 
-
-**Authenticator Private IP Address:** `10.11.12.200`
+**Authenticator Private IP Address:** `10.11.12.200` *(replace with the actual private IP address)*
 
 The CCS must be able to reach this private static IP address. See:
 [`04_Config_Internal_DNS.md`](04_Config_Internal_DNS.md) 
@@ -220,6 +214,8 @@ Generate these credentials on the xstAuth Light Server.
 **Client Secret:** `vaNp...d7wA`
 
 **IMPORTANT:** New credentials (Client ID and Client Secret) are generated each time. You must update the corresponding credentials in your CCS `.env` file every time you generate new credentials. If the credentials are out of sync, verification will fail.
+
+You can now copy and paste the **Client ID** and **Client Secret** into the provided `env-example` file on your CCS Web Server.
 
 ---
 
@@ -266,7 +262,7 @@ Start the server:
 Run > Start Server
 ```
 
-If the server starts successfully, proceed to complete your **CCS Web Server** configuration.
+If the server starts successfully, keep it running and proceed with the **CCS Web Server** configuration.
 
 Refer to [`07_Config_CCS_Web_Server.md`](07_Config_CCS_Web_Server.md).
 
