@@ -15,7 +15,7 @@ Open the **xstAuth Light Server** and add the downloaded licence certificate to 
 
 The default brand name is Passwordless Community. If you prefer to use your own brand name instead of the default name, email us at [**info@xstring.tech**](mailto:info@xstring.tech) with the name (maximum 25 characters) you would like to use and the website or platform URL.
 
-We will provide you with a dedicated **12-month licence certificate at no cost**. The 12-month licence is **renewable at no cost**, subject to eligibility and the applicable licence terms. Refer to [`README.md`](https://github.com/XSTRING-TECH/private-software/blob/main/README.md) in the **Licence Renewal** section.
+We will provide you with a dedicated **12-month licence certificate at no cost**. The 12-month licence is **renewable at no cost**, subject to eligibility and the applicable licence terms. Refer to [`README.md`](README.md) in the **Licence Renewal** section.
 
 The licence is provided at no cost and **no donation is required**. However, if you would like to support the continued development and maintenance of the project, you can make an optional donation:
 
