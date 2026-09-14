@@ -50,15 +50,15 @@ C:/xstAuth/CCS_mTLS/publicKeyJWT.pem
 Create the directory on the xstAuth Light Server. Open PowerShell on the xstAuth Light Server and run:
 
 ```powershell
-mkdir C:\xstAuth\AAS_mTLS
+mkdir C:\xstAuth\AAS_JWT
 ```
 
-Move the downloaded test file `privateKeyJWT.pem` into the `C:\xstAuth\AAS_mTLS` directory on the xstAuth Light Server.
+Move the downloaded test file `privateKeyJWT.pem` into the `C:\xstAuth\AAS_JWT` directory on the xstAuth Light Server.
 
 The directory should contain:
 
 ```text
-C:/xstAuth/AAS_mTLS/privateKeyJWT.pem
+C:/xstAuth/AAS_JWT/privateKeyJWT.pem
 ```
 
 > ### Configure the mTLS credentials
@@ -67,7 +67,6 @@ C:/xstAuth/AAS_mTLS/privateKeyJWT.pem
 > 
 > The CCS Web Server accesses the mTLS credentials using file paths. The xstAuth Light Server accesses its mTLS credentials directly as encrypted credentials.
 >
-> For detailed configuration instructions, refer to [06_Config_AAS_Auth_Server.md](06_Config_AAS_Auth_Server.md).
 
 > ### Important Security
 >
@@ -76,3 +75,11 @@ C:/xstAuth/AAS_mTLS/privateKeyJWT.pem
 > Never publish private keys, signing keys, or other sensitive credentials.
 >
 > For production key generation instructions, refer to the **How to Setup** page under the **Help** menu in the **xstAuth Light Server**.
+
+## Step 2 Complete
+
+After completing **Step 2**, you should have successfully prepared RSA key pairs.
+
+You can now proceed to configure xstAuth Light Server. See [`06_Config_AAS_Auth_Server.md`](06_Config_AAS_Auth_Server.md).
+
+---
