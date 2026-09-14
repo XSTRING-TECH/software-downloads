@@ -39,7 +39,9 @@ If the server provider dynamically assigns the instance's public IP address:
 
 A static public IP address is recommended because the authentication server's DNS record should remain associated with a consistent address.
 
-If inbound traffic on TCP port 80 (HTTP) and TCP port 443 (HTTPS) is not already allowed by the **network firewall** rules, enable access to these ports. Port 80 may be disabled at a later stage once HTTP-01 certificate validation is complete.
+If inbound traffic on TCP ports **80 (HTTP)** and **443 (HTTPS)** is not already allowed by the network firewall rules, enable it now.
+
+Port 80 may be disabled at a later stage once **HTTP-01 certificate validation** is complete.
 
 ---
 
@@ -216,6 +218,8 @@ If you update the xstAuth Light Server to a newer release, **you can continue us
 
 ## 1.10 Set Up HTTP Server
 
+**Assumption:** You already have an **A record** pointing `auth.yourdomain.com` to the server instance where the **xstAuth Light Server** is installed.
+
 Open the **xstAuth Light Server** and go to:
 
 ```text
@@ -332,6 +336,8 @@ New-NetFirewallRule -DisplayName "Allow HTTP 80" -Direction Inbound -Protocol TC
 ------------------------------------------------------------------------
 
 ## 2. Start win-acme to Request xstAuth Light Server Certificate
+
+Assumption: The HTTP-01.js server is still running.
 
 ## 2.1 Start win-acme
 
@@ -789,7 +795,7 @@ Still Having Problems? Refer to [`troubleshooting.md`](troubleshooting.md) for t
 
 After completing **Step 2**, you should have successfully configured and verified the **HTTPS connection for xstAuth Auth Server**.
 
-You can now proceed to configure the internal DNS records. See [`03_Prep_CCS_Win_Server.md`](03_Prep_CCS_Win_Server.md).
+You can now proceed to prepare CCS Web Server. See [`03_Prep_CCS_Win_Server.md`](03_Prep_CCS_Win_Server.md).
 
 ---
 
@@ -815,4 +821,3 @@ Before placing a server into production, consider:
 * Apply the security controls required by your organisation and hosting provider.
 
 ---
-
