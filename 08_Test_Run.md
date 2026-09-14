@@ -28,6 +28,8 @@ The authenticator is ready to use when the **`Confirm it's you`** button is disp
 
 Operate as a user, either as a returning user or a new user.
 
+> Assumption: Both the **CCS Web Server** and the **xstAuth Light Server** are running.
+
 Open a web browser and enter:
 
 `https://www.yourdomain.com`
@@ -144,5 +146,3 @@ From the user's perspective, the process is simple:
 That's it. The test is complete.
 
 Now return to your **CCS Web Server** and inspect the **ID Token** and related user metadata returned from a successful `authCode` exchange.
-
-
