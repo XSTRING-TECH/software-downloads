@@ -723,14 +723,6 @@ application.
 
 ---
 
-## HTTPS Connection Test on CCS Web Server
-
-After obtaining the TLS certificates, verify that HTTPS is working correctly on both the  and the 
-
-
-
-
-
 ## HTTPS Connection Test on xstAuth Light Server
 
 1. Open **xstAuth Light Server**.
