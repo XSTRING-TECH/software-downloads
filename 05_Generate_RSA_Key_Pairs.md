@@ -17,7 +17,7 @@ Follow the in-application guide to generate the required files for your producti
 Sample mTLS credentials and a JWT public key are provided for quick testing and demonstration purposes. These files are not suitable for production use.
 
 
-### 1. Move the sample PEM files
+### 1. Move the Sample PEM Files — CCS Web Server
 
 Create the directory on the CCS Web Server. Open PowerShell on the CCS Web Server and run:
 
@@ -45,7 +45,7 @@ C:/xstAuth/CCS_mTLS/publicKeyJWT.pem
 
 ---
 
-### 2. Move the sample JWT private key
+### 2. Move the Sample JWT Private Key — xstAuth Light Server
 
 Create the directory on the xstAuth Light Server. Open PowerShell on the xstAuth Light Server and run:
 
