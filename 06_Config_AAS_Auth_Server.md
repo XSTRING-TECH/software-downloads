@@ -24,7 +24,7 @@ We will provide you with a dedicated **12-month licence certificate at no cost**
 
 The licence is provided at no cost and **no donation is required**. However, if you would like to support the continued development and maintenance of the project, you can make an optional donation:
 
-[**Support the project with an optional donation**](https://donate.stripe.com/4gM28rfdYfjPgLC4nb43S00)
+[**Support the project with an optional donation**](https://donate.stripe.com/9B628r2rc2x3fHy4nb43S02)
 
 ---
 
