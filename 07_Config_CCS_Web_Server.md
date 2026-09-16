@@ -208,8 +208,9 @@ Verify TCP connectivity on port 8443
 
 Assumption: xstAuth Light Server is still running.
 
-> Test-NetConnection aas.private.io -Port 8443
-
+```powershell
+Test-NetConnection aas.private.io -Port 8443
+```
 Look for:
 
 > TcpTestSucceeded : True
