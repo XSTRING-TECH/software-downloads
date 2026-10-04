@@ -180,6 +180,24 @@ The xstAuth Light Server is running and listening on port 443, but remote system
 Check existing firewall rules:
 
 ```powershell
+Get-NetFirewallRule -Enabled True -Direction Inbound |
+    Where-Object {$_.Action -eq "Allow"} |
+    ForEach-Object {
+        $rule = $_
+        $ports = $rule | Get-NetFirewallPortFilter
+        if ($ports.Protocol -eq "TCP" -and ($ports.LocalPort -contains "443" -or $ports.LocalPort -eq "443")) {
+            [PSCustomObject]@{
+                Name        = $rule.DisplayName
+                Action      = $rule.Action
+                Profile     = $rule.Profile
+                LocalPort   = $ports.LocalPort
+                RemoteAddr  = ($rule | Get-NetFirewallAddressFilter).RemoteAddress
+            }
+        }
+    }
+```
+
+```powershell
 Get-NetFirewallRule -Enabled True | Where-Object {$_.Direction -eq "Inbound"}
 ```
 
