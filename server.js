@@ -112,7 +112,8 @@ CCS.post("/request", async (req, res) => {
         //
         // If xst-authentication is used as the primary passwordless authentication
         // method, canonical_username does not need to be provided. The user's NPK
-        // can be used as the authoritative canonical account identifier.
+        // can be used as the authoritative canonical account identifier. This meets
+        // the no-cost licence requirements for Passwordless Community to use xstAuth Light Server.
         scope: scope,
         response_type: "code",
         redirect_uri: CCS_BASE_URL,
