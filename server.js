@@ -101,7 +101,7 @@ CCS.post("/request", async (req, res) => {
     let state = randomUUID(); // Generate a unique state value for the stateful integration with the AAS.
     const anoiPayload = JSON.stringify({
         state: state,
-        canonical_username: "abc123_john_smith",
+        canonical_username: "abc123_alice_smith",
         // The canonical username is the CCS's authoritative internal account
         // identifier used to uniquely identify the user's account. It may be a
         // conventional username or another unique internal identifier maintained
