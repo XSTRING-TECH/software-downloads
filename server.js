@@ -101,7 +101,18 @@ CCS.post("/request", async (req, res) => {
     let state = randomUUID(); // Generate a unique state value for the stateful integration with the AAS.
     const anoiPayload = JSON.stringify({
         state: state,
-        canonical_username: "abc123_john_smith", // The canonical username is the CCS's authoritative internal account identifier used to uniquely identify the user's account. It may be a conventional username or another unique internal identifier maintained by the CCS.
+        canonical_username: "abc123_john_smith",
+        // The canonical username is the CCS's authoritative internal account
+        // identifier used to uniquely identify the user's account. It may be a
+        // conventional username or another unique internal identifier maintained
+        // by the CCS. This is particularly useful when the CCS needs to retain
+        // existing password-based authentication while using xst-authentication
+        // as a second factor of MFA for existing users. However, the CCS will need
+        // to use xstAuth Light Server Pro to meet the applicable licensing requirements.
+        //
+        // If xst-authentication is used as the primary passwordless authentication
+        // method, canonical_username does not need to be provided. The user's NPK
+        // can be used as the authoritative canonical account identifier.
         scope: scope,
         response_type: "code",
         redirect_uri: CCS_BASE_URL,
